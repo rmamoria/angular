@@ -1,0 +1,54 @@
+<div class="bg-gray-900 text-white h-screen">
+    <div class="flex h-full">
+        <!-- Sidebar with key concepts -->
+        <div class="w-full sm:w-1/6 mb-20 h-full">
+            <div class="sidebar bg-gray-900 p-4 h-full overflow-auto">
+                <h2 class="text-white">Key concepts</h2>
+                <ul>
+                    <li *ngFor="let concept of keyConcepts" 
+                        class="sidebar-item text-gray-400 hover:bg-gray-200 hover:text-black rounded-lg p-2 cursor-pointer mb-2"
+                        [ngClass]="{
+                            'bg-white text-black': selectedConcept?.id === concept.id,
+                            'text-gray-400': selectedConcept?.id !== concept.id
+                        }"
+                        (click)="onConceptClick(concept)">
+                        {{ concept.title }}
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Details of the selected concept -->
+        <div class="w-full sm:w-5/6 h-full">
+            <div *ngIf="selectedConcept" class="details bg-white shadow-md px-8 py-8 h-full overflow-auto pb-20">
+                <h1 class="details-title font-extrabold mb-4 text-gray-800">{{ selectedConcept.title }}</h1>
+                <p class="details-content text-lg text-gray-700 leading-relaxed">{{ selectedConcept.details }}</p>
+
+                <div class="mt-6">
+                    <h2 class="code-title text-2xl font-extrabold mb-2 text-gray-800">Code Snippet</h2>
+                    <pre class="code-snippet bg-gray-100 rounded-lg p-4 text-gray-800 overflow-auto">{{ selectedConcept.codeSnippet }}</pre>
+                </div>
+
+                <div class="mt-6">
+                    <h2 class="code-title text-3xl font-extrabold mb-2 text-gray-800">Code Explanation</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">{{ selectedConcept.codeExplanation }}</p>
+                </div>
+
+                <div class="mt-6">
+                    <h2 class="code-title text-2xl font-bold mb-2 text-gray-800">Use Cases</h2>
+                    <ul class="text-lg text-gray-700 leading-relaxed">
+                        <li *ngFor="let useCase of selectedConcept.useCases">{{ useCase }}</li>
+                    </ul>
+                </div>
+
+                <div class="mt-6">
+                    <h2 class="code-title text-2xl font-bold mb-2 text-gray-800">Summary</h2>
+                    <p class="text-lg text-gray-700 leading-relaxed">{{ selectedConcept.summary }}</p>
+                </div>
+            </div>
+            <div *ngIf="!selectedConcept" class="text-white text-center p-4">
+                <p>No concept selected.</p>
+            </div>
+        </div>
+    </div>
+</div>

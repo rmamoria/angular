@@ -1,0 +1,225 @@
+<div class="bg-gray-100 p-10 rounded-lg shadow-md px-20">
+  <div class="flex justify-between items-center">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">Angular Documentation</h2>
+    <div class="flex">
+      <p class="mr-4 text-gray-600 text-lg" id="clock">{{ currentTime | date: 'medium' }}</p>
+     
+    </div>
+  </div>
+
+  <p class="text-gray-700 mb-6">
+    The Angular component provides a styled hero section for prominent content
+    display.
+  </p>
+
+  <!-- Angular Installation -->
+  <div class="doc-section">
+    <h3>Angular Installation</h3>
+    <pre><code class="language-javascript">
+  # Install Angular CLI globally
+  npm install -g <span>angular/cli</span>
+  
+  # Create a new Angular project
+  ng new my-angular-app
+  
+  # Navigate to the project directory
+  cd my-angular-app
+  
+  # Serve the application
+  ng serve
+          </code></pre>
+  </div>
+
+  <!-- Usage Example -->
+  <div class="doc-section">
+    <h3>Usage</h3>
+    <pre><code class="language-html">
+  &lt;!-- Include the Hero component --&gt;
+  &lt;hero title="Welcome to our App" subtitle="Lorem ipsum dolor sit amet"&gt;
+      &lt;p&gt;Additional content goes here&lt;/p&gt;
+  &lt;/hero&gt;
+          </code></pre>
+  </div>
+
+  <!-- Directive Usage -->
+  <div class="doc-section">
+    <h3>Directive Usage</h3>
+    <p>
+      Use the <code>ng-content</code> directive to insert additional content
+      within the hero component.
+    </p>
+  </div>
+
+  <!-- Props and Events -->
+  <div class="doc-section">
+    <h3>Props and Events</h3>
+    <p>
+      The hero component emits the <code>close</code> event when the close
+      button is clicked.
+    </p>
+  </div>
+
+  <!-- Component Definition -->
+  <div class="doc-section">
+    <h3>Component Definition</h3>
+    <p>
+      The Hero component consists of a title, subtitle, and optional additional
+      content.
+    </p>
+  </div>
+
+  <!-- Attributes -->
+  <div class="doc-section">
+    <h3>Attributes</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Attribute</th>
+          <th>Description</th>
+          <th>Type</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>title</td>
+          <td>Main title displayed in hero section</td>
+          <td>String</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>subtitle</td>
+          <td>Subtitle displayed below the title</td>
+          <td>String</td>
+          <td>-</td>
+        </tr>
+        <tr>
+            <td>subtitle</td>
+            <td>Subtitle displayed below the title</td>
+            <td>String</td>
+            <td>-</td>
+          </tr>
+          <tr>
+            <td>subtitle</td>
+            <td>Subtitle displayed below the title</td>
+            <td>String</td>
+            <td>-</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Advanced Usage -->
+  <div class="doc-section">
+    <h3>Advanced Usage</h3>
+    <p>
+      Customize the hero component's background image by passing a
+      <code>background-image</code> prop.
+    </p>
+  </div>
+
+  <!-- Best Practices -->
+  <div class="doc-section">
+    <h3>Best Practices</h3>
+    <p>
+      Avoid nesting hero components deeply within other components for better
+      performance.
+    </p>
+  </div>
+
+  <!-- Troubleshooting -->
+  <div class="doc-section">
+    <h3>Troubleshooting</h3>
+    <p>
+      If the hero component's styles are not applied correctly, ensure Tailwind
+      CSS is correctly configured in your Angular project.
+    </p>
+  </div>
+
+  <!-- Styling -->
+  <div class="doc-section">
+    <h3>Styling</h3>
+    <p>
+      This component uses Tailwind CSS for styling. Ensure Tailwind CSS is
+      included in your project for consistent styling.
+    </p>
+  </div>
+
+  <!-- Examples -->
+  <div class="doc-section">
+    <h3>Examples</h3>
+    <div class="border border-gray-200 rounded-lg p-4">
+      <div title="Welcome to our App" subtitle="Lorem ipsum dolor sit amet">
+        <p>Additional content can be included here.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Angular Concepts -->
+  <!-- Angular Concepts -->
+  <div class="doc-section">
+    <h3 class="text-xl font-semibold mb-2">Angular Concepts</h3>
+    <ul class="list-disc ml-6">
+      <li class="mb-3">
+        <span class="font-semibold">Lifecycle Hooks:</span> Lifecycle hooks
+        allow you to tap into key moments in a component's lifecycle, such as
+        <code class="bg-gray-200 px-1 rounded-md">ngOnInit</code>,
+        <code class="bg-gray-200 px-1 rounded-md">ngOnChanges</code>, etc.
+      </li>
+      <li class="mb-3">
+        <span class="font-semibold">Selectors:</span> Selectors define how a
+        component is identified in the HTML. They can be element selectors,
+        attribute selectors, etc.
+      </li>
+      <li class="mb-3">
+        <span class="font-semibold">Host Element:</span> The host element is the
+        DOM element to which the Angular component is attached.
+      </li>
+      <li class="mb-3">
+        <span class="font-semibold">Why Use Angular:</span> Angular offers a
+        structured framework for building dynamic web applications with features
+        like two-way data binding, dependency injection, and comprehensive
+        tooling.
+      </li>
+      <li class="mb-3">
+        <span class="font-semibold">Services:</span> Share data and logic across
+        components using Angular services.
+      </li>
+      <li class="mb-3">
+        <span class="font-semibold">Routing:</span> Set up navigation between
+        views with Angular's powerful routing capabilities.
+      </li>
+    </ul>
+  </div>
+
+  <!-- Additional Resources -->
+  <div class="doc-section">
+    <h3>Additional Resources</h3>
+    <ul>
+      <li><a href="#">Getting Started with Angular</a></li>
+      <li><a href="#">Angular Component Library</a></li>
+      <li><a href="#">Tailwind CSS Documentation</a></li>
+    </ul>
+  </div>
+
+  <!-- Related Links -->
+  <div class="doc-section">
+    <h3>Related Links</h3>
+    <ul>
+      <li><a href="#">Angular Official Documentation</a></li>
+      <li><a href="#">Tailwind CSS Official Documentation</a></li>
+    </ul>
+  </div>
+  <div class="doc-section">
+    <h3>Related Links</h3>
+    <ul>
+      <li><a href="#">Angular Official Documentation</a></li>
+      <li>
+        <a href="https://angular.dev/" target="_blank"
+          >Angular Official Website</a
+        >
+      </li>
+      <li><a href="#">Tailwind CSS Official Documentation</a></li>
+    </ul>
+  </div>
+</div>

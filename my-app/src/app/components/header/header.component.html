@@ -1,0 +1,30 @@
+<header class="bg-gray-900 text-white fixed top-0 left-0  w-full z-10">
+    <div class="w-full  py-5 px-10 flex justify-between items-center ">
+      <div class="flex items-center cursor-pointer" (click)="navigateToHome()"> 
+        <!-- //event binding -->
+      <img src="assets/logo.png" alt="Logo" class="h-10 mr-2">
+        <span class="text-2xl font-semibold">Angular</span>
+      </div>
+
+      <!-- Search bar -->
+      <div class="relative mx-6 left-0">
+        <input type="text" placeholder="Search..." class="py-2 px-4 pr-10 rounded w-96  bg-gray-700 text-white focus:outline-none ">
+        <span class="absolute right-0 top-0 mt-2 mr-3 text-gray-400">
+            <i class="material-icons cursor-pointer hover:text-white">search</i>
+        </span>
+      </div>
+
+      <nav>
+        <ul class="flex space-x-10 ">
+          <li><a routerLink="/" [class.active]="isHomeActive()" class="nav-link">Home</a></li>
+          <li><a routerLink="/learn-angular" routerLinkActive="active" class="nav-link">Learn Angular</a></li>
+          <li><a routerLink="/services" routerLinkActive="active" class="nav-link">Services</a></li>
+          <li><a routerLink="/contact" routerLinkActive="active" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="pt-20">
+    <!-- Page content goes here -->
+  </div>
